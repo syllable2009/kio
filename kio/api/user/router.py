@@ -1,9 +1,10 @@
 from __future__ import annotations
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends
 
-from kio.api.user_api.dependencies import get_user_service
-from kio.api.user_api.schemas import UserListResponse, UserResponse
+from kio.api.user.dependencies import get_user_service
+from kio.api.user.schemas import UserListResponse, UserResponse
+from kio.exceptions import ErrorCode, NotFoundError
 from kio.services.user_service import UserService
 
 router = APIRouter(prefix="/user", tags=["user"])
@@ -22,5 +23,5 @@ def get_user(
     """根据 ID 获取单个用户。"""
     user = service.get_user(user_id)
     if user is None:
-        raise HTTPException(status_code=404, detail="User not found")
+        raise NotFoundError("User not found", code=ErrorCode.USER_NOT_FOUND)
     return user

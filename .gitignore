@@ -5,11 +5,29 @@ build/
 dist/
 wheels/
 *.egg-info
+.python-version
+.uv/
+uv.lock
+
+# 编译文件
+__pycache__/
+*.py[cod]
+*.so
 
 # Virtual environments
-.venv
-
+.venv/
+venv/
+.env
+.env.*
+!.env.example
 
 # idea
 .idea/
+.vscode/
+*.swp
+*.swo
 .DS_Store
+
+# 日志
+logs/
+*.log

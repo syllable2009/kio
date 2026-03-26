@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from kio.api.movie_api.schemas import MovieListResponse, MovieResponse
+from kio.api.movie.schemas import MovieListResponse, MovieResponse
 from kio.db.repositories.movie_repository import MovieRepository
 
 

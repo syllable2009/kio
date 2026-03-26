@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from kio.api.user_api.schemas import UserListResponse, UserResponse
+from kio.api.user.schemas import UserListResponse, UserResponse
 from kio.db.repositories.user_repository import UserRepository
 
 

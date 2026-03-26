@@ -1,9 +1,10 @@
 from __future__ import annotations
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends
 
-from kio.api.movie_api.dependencies import get_movie_service
-from kio.api.movie_api.schemas import MovieListResponse, MovieResponse
+from kio.api.movie.dependencies import get_movie_service
+from kio.api.movie.schemas import MovieListResponse, MovieResponse
+from kio.exceptions import ErrorCode, NotFoundError
 from kio.services.movie_service import MovieService
 
 router = APIRouter(prefix="/movie", tags=["movie"])
@@ -24,5 +25,5 @@ def get_movie(
     """根据 ID 获取单个电影。"""
     movie = service.get_movie(movie_id)
     if movie is None:
-        raise HTTPException(status_code=404, detail="Movie not found")
+        raise NotFoundError("Movie not found", code=ErrorCode.MOVIE_NOT_FOUND)
     return movie
