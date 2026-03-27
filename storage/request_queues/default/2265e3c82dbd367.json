@@ -1,0 +1,21 @@
+{
+  "unique_key": "https://www.21voa.com/static/lrc/nepal-increases-cost-of-permits-to-climb-everest.lrc",
+  "url": "https://www.21voa.com/static/lrc/nepal-increases-cost-of-permits-to-climb-everest.lrc",
+  "method": "GET",
+  "payload": null,
+  "headers": {},
+  "user_data": {
+    "__crawlee": {
+      "enqueueStrategy": "same-hostname",
+      "state": 3,
+      "crawlDepth": 1
+    },
+    "label": "VOA_DETAIL",
+    "storage_root": "/Users/jiaxiaopeng/Downloads/voa_data",
+    "list_url": "https://www.21voa.com/special_english/"
+  },
+  "retry_count": 0,
+  "no_retry": false,
+  "loaded_url": null,
+  "handled_at": "2026-03-27 03:40:34.794270+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "unique_key": "https://www.21voa.com/special_english/the-golden-gate-bridge-san-francisco-s-historic-suspension-bridge-93388.html",
+  "url": "https://www.21voa.com/special_english/the-golden-gate-bridge-san-francisco-s-historic-suspension-bridge-93388.html",
+  "method": "GET",
+  "payload": null,
+  "headers": {},
+  "user_data": {
+    "__crawlee": {
+      "enqueueStrategy": "same-hostname",
+      "state": 4,
+      "crawlDepth": 1
+    },
+    "label": "VOA_DETAIL",
+    "storage_root": "/Users/jiaxiaopeng/Downloads/voa_data",
+    "list_url": "https://www.21voa.com/special_english/"
+  },
+  "retry_count": 0,
+  "no_retry": false,
+  "loaded_url": null,
+  "handled_at": "2026-03-27 06:44:22.057605+00:00"
+}

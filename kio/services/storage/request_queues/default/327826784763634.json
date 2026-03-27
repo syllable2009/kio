@@ -1,0 +1,21 @@
+{
+  "unique_key": "https://www.21voa.com/static/lrc/george-washington-first-president.lrc",
+  "url": "https://www.21voa.com/static/lrc/george-washington-first-president.lrc",
+  "method": "GET",
+  "payload": null,
+  "headers": {},
+  "user_data": {
+    "__crawlee": {
+      "enqueueStrategy": "same-hostname",
+      "state": 6,
+      "crawlDepth": 1
+    },
+    "label": "VOA_DETAIL",
+    "storage_root": "/Users/jiaxiaopeng/Downloads/voa_data",
+    "list_url": "https://www.21voa.com/special_english/"
+  },
+  "retry_count": 3,
+  "no_retry": false,
+  "loaded_url": null,
+  "handled_at": "2026-03-27 06:45:53.618956+00:00"
+}

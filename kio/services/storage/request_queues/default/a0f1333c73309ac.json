@@ -1,0 +1,21 @@
+{
+  "unique_key": "https://www.21voa.com/words_and_idioms.html",
+  "url": "https://www.21voa.com/words_and_idioms.html",
+  "method": "GET",
+  "payload": null,
+  "headers": {},
+  "user_data": {
+    "__crawlee": {
+      "enqueueStrategy": "same-hostname",
+      "state": 5,
+      "crawlDepth": 1
+    },
+    "label": "VOA_DETAIL",
+    "storage_root": "/Users/jiaxiaopeng/Downloads/voa_data",
+    "list_url": "https://www.21voa.com/special_english/"
+  },
+  "retry_count": 2,
+  "no_retry": false,
+  "loaded_url": "https://www.21voa.com/words_and_idioms.html",
+  "handled_at": null
+}

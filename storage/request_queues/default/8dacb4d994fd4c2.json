@@ -1,0 +1,19 @@
+{
+  "unique_key": "https://www.21voa.com/special_english",
+  "url": "https://www.21voa.com/special_english/",
+  "method": "GET",
+  "payload": null,
+  "headers": {},
+  "user_data": {
+    "__crawlee": {
+      "state": 4
+    },
+    "label": "VOA_LIST",
+    "max_articles": 5,
+    "storage_root": "/Users/jiaxiaopeng/Downloads/voa_data"
+  },
+  "retry_count": 0,
+  "no_retry": false,
+  "loaded_url": null,
+  "handled_at": "2026-03-27 03:37:49.377174+00:00"
+}

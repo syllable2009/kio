@@ -1,0 +1,21 @@
+{
+  "unique_key": "https://www.21voa.com/economics_report.html",
+  "url": "https://www.21voa.com/economics_report.html",
+  "method": "GET",
+  "payload": null,
+  "headers": {},
+  "user_data": {
+    "__crawlee": {
+      "enqueueStrategy": "same-hostname",
+      "state": 6,
+      "crawlDepth": 1
+    },
+    "label": "VOA_DETAIL",
+    "storage_root": "/Users/jiaxiaopeng/Downloads/voa_data",
+    "list_url": "https://www.21voa.com/special_english/"
+  },
+  "retry_count": 3,
+  "no_retry": false,
+  "loaded_url": "https://www.21voa.com/economics_report.html",
+  "handled_at": "2026-03-27 03:43:49.130213+00:00"
+}
