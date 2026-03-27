@@ -13,6 +13,7 @@ uv.lock
 __pycache__/
 *.py[cod]
 *.so
+storage
 
 # Virtual environments
 .venv/
