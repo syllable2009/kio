@@ -1,0 +1,5 @@
+# Kio 默认配置（可被仓库根目录 config/kio.yaml 覆盖，再被环境变量 KIO_* 覆盖）
+
+host: "0.0.0.0"
+port: 9000
+reload: true

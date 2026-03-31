@@ -11,6 +11,7 @@ dependencies = [
     "fastapi>=0.110",
     "parsel>=1.11.0",
     "playwright>=1.40",
+    "pyyaml>=6.0",
     "uvicorn[standard]>=0.27",
 ]
 
@@ -23,3 +24,6 @@ dev = [
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
+
+[tool.setuptools]
+packages = ["kio"]

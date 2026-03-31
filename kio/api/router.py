@@ -10,4 +10,3 @@ router = APIRouter()
 router.include_router(health_router)
 router.include_router(user_router)
 router.include_router(movie_router)
-

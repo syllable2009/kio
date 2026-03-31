@@ -63,11 +63,11 @@ async def _save_text(path: Path, title: str, body: str) -> None:
 
 
 async def _download_mp3(
-    context: PlaywrightCrawlingContext,
-    url: str,
-    dest: Path,
-    *,
-    referer: str,
+        context: PlaywrightCrawlingContext,
+        url: str,
+        dest: Path,
+        *,
+        referer: str,
 ) -> None:
     page = context.page
     resp = await page.request.get(
@@ -198,11 +198,12 @@ async def handle_voa_default_page(context: PlaywrightCrawlingContext) -> None:
 voa_router.default_handler(handle_voa_default_page)
 
 
+# 强制关键字参数：* 写在参数里 = 后面所有参数，必须用 “名字 = 值” 的方式传，不能直接按顺序传。
 async def crawl_voa_special_english(
-    *,
-    list_url: str = VOA_SPECIAL_ENGLISH_LIST_URL,
-    max_articles: int | None = None,
-    storage_root: Path | str | None = None,
+        *,
+        list_url: str,
+        max_articles: int | None = None,
+        storage_root: Path | str | None = None,
 ) -> None:
     """
     爬取 21voa 慢速英语「最近更新」列表，再逐篇进入详情保存文本与 MP3。
@@ -213,6 +214,10 @@ async def crawl_voa_special_english(
     - VOA_STORAGE_DIR：保存目录（默认 仓库根下 storage/voa）
     - VOA_HEADLESS：1/0，是否无头浏览器（默认 1）
     """
+    # 路径安全处理
+    # Path(storage_root) 把传进来的路径（字符串 或 Path 对象）统一变成 Path 路径对象
+    # .resolve() 把相对路径变成绝对路径，比如 ./data → 变成 /User/xxx/project/data
+    # .expanduser() 解析路径里的 ~（用户目录）比如 ~/documents → 变成 /User/xxx/documents
     root = Path(storage_root).expanduser().resolve() if storage_root else _default_storage_root()
     ma = max_articles if max_articles is not None else int(os.getenv("VOA_MAX_ARTICLES", "5"))
 
@@ -232,4 +237,4 @@ async def crawl_voa_special_english(
 
 if __name__ == "__main__":
     # uv run python -m kio.services.voa_service
-    asyncio.run(crawl_voa_special_english(max_articles=1))
+    asyncio.run(crawl_voa_special_english(list_url=VOA_SPECIAL_ENGLISH_LIST_URL, max_articles=1))
