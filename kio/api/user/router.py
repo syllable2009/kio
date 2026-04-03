@@ -9,7 +9,7 @@ from kio.services.user_service import UserService
 
 router = APIRouter(prefix="/user", tags=["user"])
 
-
+# FastAPI 依赖注入，Depends自动调用 get_user_service() 函数，自动创建 / 获取 UserService 实例，把获取到的服务实例赋值给 service
 @router.get("", response_model=ApiResponse)
 def list_users(service: UserService = Depends(get_user_service)) -> ApiResponse:
     """获取所有用户列表。"""
